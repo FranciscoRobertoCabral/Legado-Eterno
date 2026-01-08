@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   CheckCircle, 
@@ -82,6 +81,10 @@ const App: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleCheckout = () => {
+    window.location.href = 'https://pay.celetus.com/4MKM9L02';
   };
 
   return (
@@ -325,7 +328,10 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            <Button className="w-full text-2xl py-8 mb-6 uppercase tracking-wider">
+            <Button 
+              onClick={handleCheckout}
+              className="w-full text-2xl py-8 mb-6 uppercase tracking-wider"
+            >
               GARANTIR MINHA VAGA AGORA
             </Button>
             
