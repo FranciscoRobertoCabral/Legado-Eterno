@@ -222,7 +222,6 @@ const App: React.FC = () => {
               {[
                 { title: "Livro digital - Colorindo com Jesus", format: "PDF", icon: <Palette size={22} className="text-primary" /> },
                 { title: "Livro digital - Aventuras Bíblicas", format: "PDF", icon: <BookOpen size={22} className="text-primary" /> },
-                { title: "Livro digital - Aprendendo com Alegria", format: "PDF", icon: <Heart size={22} className="text-primary" /> },
                 { title: "Livro digital - Passatempos Bíblicos", format: "PDF", icon: <Layers size={22} className="text-primary" /> },
                 { title: "Calendário cristão infantil", detail: "com uma missão por dia", format: "PDF", icon: <Calendar size={22} className="text-primary" /> }
               ].map((item, idx) => (
@@ -242,6 +241,14 @@ const App: React.FC = () => {
                 </div>
               ))}
             </div>
+            
+            {/* Botão solicitado após bônus "Aprendendo com Alegria" e lista */}
+            <div className="mt-8">
+              <Button onClick={handleCheckout} className="w-full py-5 text-lg">
+                QUERO MEU ACESSO AGORA <ArrowRight size={20} />
+              </Button>
+            </div>
+
             <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-center gap-3 text-slate-400">
                <ShieldCheck size={20} className="text-green-500" />
                <span className="text-xs font-bold uppercase tracking-widest">Acesso imediato após a compra</span>
@@ -289,6 +296,13 @@ const App: React.FC = () => {
               </div>
             ))}
           </div>
+
+          {/* Botão solicitado conforme imagem (entre depoimentos e banner oferta) */}
+          <div className="mt-16 flex justify-center">
+             <Button onClick={handleCheckout} className="w-full md:w-auto text-xl py-6 px-16 uppercase tracking-wider">
+                GARANTIR MINHA VAGA AGORA <ArrowRight size={20} />
+             </Button>
+          </div>
         </div>
       </section>
 
@@ -324,7 +338,7 @@ const App: React.FC = () => {
                 <CheckCircle size={18} className="text-green-500" /> Guia de Devocionais
               </div>
               <div className="flex items-center gap-2 font-semibold">
-                <CheckCircle size={18} className="text-green-500" /> Bônus: Filhos e Telas
+                <CheckCircle size={18} className="text-green-500" /> Bônus: Aprendendo com alegria
               </div>
             </div>
 
@@ -408,7 +422,7 @@ const App: React.FC = () => {
 
       {/* Floating Sticky CTA Mobile */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-md border-t border-slate-100 z-50">
-        <Button onClick={scrollToOffer} className="w-full py-4 text-lg">
+        <Button onClick={handleCheckout} className="w-full py-4 text-lg">
           QUERO GARANTIR O FUTURO <ArrowRight size={20} />
         </Button>
       </div>
