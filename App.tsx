@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   CheckCircle, 
@@ -224,7 +223,7 @@ const App: React.FC = () => {
                 { title: "Livro digital - Colorindo com Jesus", format: "PDF", icon: <Palette size={22} className="text-primary" /> },
                 { title: "Livro digital - Aventuras Bíblicas", format: "PDF", icon: <BookOpen size={22} className="text-primary" /> },
                 { title: "Livro digital - Passatempos Bíblicos", format: "PDF", icon: <Layers size={22} className="text-primary" /> },
-                { title: "Calendário cristão infantil", detail: "com uma missão por dia", format: "PDF", icon: <Calendar size={22} className="text-primary" /> }
+                { title: "Calendário cristão infantil", detail: "com uma mission por dia", format: "PDF", icon: <Calendar size={22} className="text-primary" /> }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4 p-3 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-primary/50 transition-all">
                   <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -335,9 +334,6 @@ const App: React.FC = () => {
               </div>
               <div className="flex items-center gap-2 font-semibold">
                 <CheckCircle size={18} className="text-green-500" /> Guia de Devocionais
-              </div>
-              <div className="flex items-center gap-2 font-semibold">
-                <CheckCircle size={18} className="text-green-500" /> Bônus: Aprendendo com alegria
               </div>
             </div>
 
